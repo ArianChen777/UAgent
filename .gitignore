@@ -1,0 +1,239 @@
+# AgentU y� .gitignore 
+# \: AgentU Team
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+## IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+## Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+## NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+## VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# ================================
+# Java 
+# ================================
+
+# Maven
+backend/target/
+backend/*/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+backend/.gradle
+backend/build/
+!backend/gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Spring Boot
+backend/spring.log
+backend/application-local.yml
+backend/application-secret.yml
+
+backend/logs/
+backend/*.log
+backend/**/*.log
+
+backend/tmp/
+backend/temp/
+
+
+backend/**/application-prod.yml
+backend/**/application-secret*.yml
+backend/**/*-secret.properties
+
+
+# Dependencies
+frontend/node_modules/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/lerna-debug.log*
+
+# Runtime data
+frontend/pids
+frontend/*.pid
+frontend/*.seed
+frontend/*.pid.lock
+
+# Coverage directory used by tools like istanbul
+frontend/coverage/
+frontend/*.lcov
+
+# nyc test coverage
+frontend/.nyc_output
+
+# Grunt intermediate storage
+frontend/.grunt
+
+# Bower dependency directory
+frontend/bower_components
+
+# node-waf configuration
+frontend/.lock-wscript
+
+# Compiled binary addons
+frontend/build/Release
+
+# Dependency directories
+frontend/jspm_packages/
+
+# TypeScript v1 declaration files
+frontend/typings/
+
+# TypeScript cache
+frontend/*.tsbuildinfo
+
+# Optional npm cache directory
+frontend/.npm
+
+# Optional REPL history
+frontend/.node_repl_history
+
+# Output of 'npm pack'
+frontend/*.tgz
+
+# Yarn Integrity file
+frontend/.yarn-integrity
+
+# dotenv environment variables file
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# parcel-bundler cache
+frontend/.cache
+frontend/.parcel-cache
+
+# Next.js build output
+frontend/.next
+
+# Nuxt.js build / generate output
+frontend/.nuxt
+frontend/dist
+
+# Gatsby files
+frontend/.cache/
+frontend/public
+
+# vue.js build output
+frontend/dist/
+
+# Storybook build outputs
+frontend/.out
+frontend/.storybook-out
+
+# Rollup.js default build output
+frontend/dist/
+
+# Uncomment if using webpack
+# frontend/lib/
+
+# ================================
+# pn��s
+# ================================
+
+# pn���
+*.db
+*.sqlite
+*.sqlite3
+
+
+sql/backup/
+sql/*.backup
+sql/*.bak
+
+sql/*-secret.sql
+sql/config-prod.sql
+
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+docker-compose.prod.yml
+
+# Kubernetes
+k8s/secrets/
+*.secret.yaml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+*.key
+*.pem
+*.p12
+*.jks
+*.keystore
+*.truststore
+
+# �f��
+*.crt
+*.cer
+
+
+.env
+.env.local
+.env.*.local
+.environment
+
+# JMeter
+backend/**/*.jtl
+backend/**/jmeter.log
+
+
+
+*.tmp
+*.temp
+temp/
+tmp/

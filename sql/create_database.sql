@@ -283,7 +283,6 @@ CREATE TABLE conversations (
     
     -- 序号信息
     sequence_number INT NOT NULL,
-    parent_id VARCHAR(36),
     
     -- 模型调用信息（仅AI回复）
     model_id VARCHAR(36),
@@ -295,16 +294,9 @@ CREATE TABLE conversations (
     output_tokens INT DEFAULT 0,
     total_tokens INT DEFAULT 0,
     
-    -- 性能指标（仅AI回复）
-    response_time_ms INT DEFAULT 0,
-    
     -- 扩展信息
     metadata JSONB DEFAULT '{}',
     attachments JSONB DEFAULT '[]',
-    
-    -- 反馈信息
-    user_rating INT CHECK (user_rating BETWEEN 1 AND 5),
-    user_feedback TEXT,
     
     -- 状态管理
     status VARCHAR(20) NOT NULL DEFAULT 'normal',
@@ -520,7 +512,6 @@ CREATE INDEX idx_conversations_session ON conversations(session_id, sequence_num
 CREATE INDEX idx_conversations_user ON conversations(user_id);
 CREATE INDEX idx_conversations_role ON conversations(session_id, role);
 CREATE INDEX idx_conversations_created_at ON conversations(created_at);
-CREATE INDEX idx_conversations_parent ON conversations(parent_id);
 
 -- 4.7 knowledge_bases表索引
 CREATE INDEX idx_knowledge_bases_user ON knowledge_bases(user_id);
